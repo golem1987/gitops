@@ -30,7 +30,7 @@ jobs:
         run: echo "VERSION=$(cat ./.VERSION)-RC-$(git rev-parse --short "$GITHUB_SHA")" >> $GITHUB_ENV
 
       - name: Get version number
-        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: echo "VERSION=$(cat ./.VERSION)" >> $GITHUB_ENV
     
       - name: Print $GITHUB_ENV
